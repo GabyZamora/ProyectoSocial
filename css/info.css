@@ -1,0 +1,10 @@
+#info img{
+    width: 100px;
+    height: 100px;
+}
+
+#info p{
+    font-size: 16px;
+    font-family: 'Quattrocento';
+    text-align: center;
+}

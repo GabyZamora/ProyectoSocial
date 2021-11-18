@@ -1,0 +1,40 @@
+.cover img {
+    top: 9em;
+    width: 48.025em;
+    height: 20em;
+}
+
+.cate img{
+    top: 2em;
+    position: relative;
+    width: 5em;
+    height: 5em;
+}
+
+.cate h3{
+    text-align: center;
+    font-family: 'Quattrocento';
+    font-size: 1.5em;
+}
+
+.cate h4{
+    text-align: center;
+    font-family: 'Quattrocento';
+    font-size: 1.5em;
+}
+.circulo {
+    width: 150px;
+    height: 150px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #5cb85c;
+}
+
+table {
+    width: 80%;
+    margin: 0  auto;
+    margin-left: 100px;
+
+
+}
