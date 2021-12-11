@@ -28,8 +28,8 @@
         <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start navbar-right">
           <ul>
             <li><a href="index.php?mod=info">Sobre Nosotros</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Servicios</a></li>
+            <li><a href="index.php?mod=prod&form=cat">Productos</a></li>
+            <li><a href="index.php?mod=ser&form=li">Servicios</a></li>
           </ul>
         </div>
     </div>

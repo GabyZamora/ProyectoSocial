@@ -1,7 +1,7 @@
 <?php
 $FormValid = false;
 switch ( @$_GET['form'] ) {
-	case 'li':
+	case 'cat':
 		$Form = 'presentacion/productos/catalogo.php';
 		$FormValid = true;
 		break;
