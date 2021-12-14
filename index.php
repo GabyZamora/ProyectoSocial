@@ -10,6 +10,9 @@ switch( @$_GET["mod"] ){
   case 'prod':
     $Section = 'presentacion/productos/index.php';
     break;
+  case 'cate':
+    $Section = 'presentacion/categorias/index.php';
+    break;
   default:
   $Section = 'presentacion/menu.php';
   break;
