@@ -33,6 +33,10 @@
         'N' )";
         return $this->EjecutarQuery( $Cadena );
       }
+
+      public function ListarCat(){
+        $Cadena = "SELECT * FROM productos WHERE categoria = ''";
+      }
     public function Actualizar( $paId ) {
       $Cadena = "UPDATE productos SET
       Nombre = '".addslashes($this->Nombre)."'
