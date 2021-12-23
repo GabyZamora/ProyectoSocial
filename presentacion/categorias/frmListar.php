@@ -2,11 +2,12 @@
 //Llamamos a la capa de datos
 require_once 'datos/datos.php';
 //Llamamos a la capa de negocio
-require_once 'negocio/paginador.php';
 require_once 'negocio/categoria.php';
+require_once 'negocio/paginador.php';
+include('presentacion/nav.php');
 //Instanciamos las clases de la capa de negocio
 $Obj_Paginador = new Paginador();
-$Obj_Categorias = new Categorias();
+$Obj_Categorias = new Categoria();
 
 //Asignamos los valores necesatrios a los atributos de la clase del paginador -----------------------------------------
 $Obj_Paginador->Cadena = $Obj_Categorias->ListarTodos( addslashes( @$_POST['txtBuscar'] ) );
@@ -14,7 +15,7 @@ $Obj_Paginador->CantTotalReg = $Obj_Categorias->CantTotalRegistros( addslashes( 
 ) );
 $Obj_Paginador->FilasPorPagina = 5; //Define la cantidad de registros mostrados por página
 $Obj_Paginador->NumPagina = @$_GET['np']; //Define la página solicitada al paginador
-$Obj_Paginador->EnlaceListar = "mod=cat&form=li"; //Define el enlace al modulo y formulario listar de ese módulo
+$Obj_Paginador->EnlaceListar = "mod=cate&form=li"; //Define el enlace al modulo y formulario listar de ese módulo
 //Aplicamos la configuración al paginador
 $Obj_Paginador->ConfPaginador();
 //Fin de configuraciones del paginador --------------------------------------------------------------------------------

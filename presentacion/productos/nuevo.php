@@ -1,6 +1,6 @@
 <?php
 require_once 'datos/datos.php';
-require_once 'negocio/categorias.php';
+require_once 'negocio/categoria.php';
 include 'presentacion/nav.php';
 $Obj_Categoria= new Categoria();
 $DatosCategoria = $Obj_Categoria->ListarTodoCombos();
@@ -30,7 +30,7 @@ $DatosCategoria = $Obj_Categoria->ListarTodoCombos();
 					</div>
  					<div class="col-md-4">
  						<button type="button" class="btn btn-danger"
-						onClick="location.replace('index.php?mod=prod&form=li');"><i class="material-icons">&#xe5c9;</i><span>Cancelar</span></button>
+						onClick="location.replace('index.php?mod=prod&form=cat');"><i class="material-icons">&#xe5c9;</i><span>Cancelar</span></button>
  						<button type="button" class="btn btn-success"
 						onClick="ValidarNuevo();"><i class="material-icons">&#xe161;</i><span>Guardar</span></button>
  					</div>

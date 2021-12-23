@@ -1,5 +1,5 @@
 body {
-    color: #566787;
+    color: #fcfcfc;
     background: #f5f5f5;
     font-family: "Trebuchet MS", Arial, Helvetica;
     font-size: 13px;
@@ -13,8 +13,8 @@ body {
 }
 .table-title {        
     padding-bottom: 15px;
-    background: #435d7d;
-    color: #fff;
+    background: #fcfcfc;
+    color: #000;
     padding: 16px 30px;
     margin: -20px -25px 10px;
     border-radius: 3px 3px 0 0;
@@ -27,7 +27,7 @@ body {
     float: right;
 }
 .table-title .btn {
-    color: #fff;
+    color: #000;
     float: right;
     font-size: 13px;
     border: none;
@@ -54,7 +54,7 @@ body {
 }
 
 .table-bottom .btn {
-    color: #fff;
+    color: #000;
     font-size: 13px;
     border: none;
     min-width: 50px;
@@ -127,7 +127,7 @@ table.table .avatar {
 } 
 .a-titulo-form, .a-titulo-form:active, .a-titulo-form:hover, .a-titulo-form:visited  {
     text-decoration: none; 
-    color: white;
+    color: black;
 }
 
 /* Input de buscar */

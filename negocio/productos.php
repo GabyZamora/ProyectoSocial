@@ -4,8 +4,23 @@
     public $Nombre;
     public $Categoria;
     public $Descripcion;
-    public $Precio;
     public $Imagen;
+
+    public function ListarTodos( $paBuscar ) {
+      $Cadena = "SELECT
+      productos.IdProducto,
+      productos.Nombre AS NombreProducto,
+      productos.IdCategoria,
+      Categoria.Nombre AS NombreCategoria,
+      productos.descripcion, 
+      productos.Producto_imagen,
+      FROM 
+      productos 
+      INNER JOIN categorias ON productos.IdCategoria = categorias.IdCategoria
+      WHERE (productos.IdProducto LIKE '%".$paBuscar."%')
+      AND productos.eliminado='N' ";
+      return $Cadena; 
+      }
 
     public function CantTotalRegistros( $paBuscar ) {
       $Cadena = "SELECT COUNT(IdProducto) FROM productos WHERE
@@ -27,15 +42,21 @@
     public function Agregar() {
     $Cadena = "INSERT INTO productos (
       Nombre,
+      IdCategoria,
+      Descripcion,
+      Producto_imagen,
       Eliminado )
       VALUES (
         '".addslashes($this->Nombre)."',
+        '".addslashes($this->Categoria)."',
+        '".addslashes($this->Descripcion)."',
+        '".addslashes($this->Imagen)."',
         'N' )";
         return $this->EjecutarQuery( $Cadena );
       }
 
       public function ListarCat(){
-        $Cadena = "SELECT * FROM productos WHERE categoria = ''";
+        $Cadena = "SELECT * FROM productos WHERE IdCategoria = 'Medicamento'";
       }
     public function Actualizar( $paId ) {
       $Cadena = "UPDATE productos SET

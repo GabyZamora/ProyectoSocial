@@ -24,6 +24,14 @@
             <label>Nombre: </label>
             <input type="text" class="form-control" id="txtNombreC" name="txtNombreC">
           </div>
+          <div class="form-group col-md-4">
+            <label>Eliminado: </label>
+            <select id="cbxEliminado" name="cbxEliminado" class="form-control">
+            <option value="<?php echo $Fila['Eliminado']; ?>">
+            <option value="S">Si</option>
+            <option value="N">No</option>
+          </select>
+        </div>
         </div>
       </div> <!-- Cierre del Div table-wrapper -->
     </div> <!-- Cierre del Div container -->
