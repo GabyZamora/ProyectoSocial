@@ -9,26 +9,7 @@ $Obj_Productos = new Productos();
 $Obj_Productos->Nombre = $_POST['txtNombre'];
 $Obj_Productos->IdCategoria = $_POST['cbxCategoria'];
 $Obj_Productos->Descripcion = $_POST['txtDescripcion'];
-$Obj_Productos->Precio= $_POST['txtPrecio'];
-//Verificamos si se envío una imágen del producto
-if ( $_FILES['Imagen']['tmp_name'] != '' ) {
-  $NombreTemporalImg = $_FILES['filImagenProd']['tmp_name'];
-  $TipoImg = $_FILES['filImagenProd']['type'];
-  $NombreImg = "prod_".date("ymdhis");
-  if( $TipoImg == 'image/png' ){
-    $Extension = "png";
-  }
-  else if( $TipoImg == 'image/jpeg' ){
-    $Extension = "jpg";
-  }
-  else {
-    $Extension = '';
-  }
-  $NombreFinalImg = $NombreImg.'.'.$Extension;
-  $UbicacionImg = 'images/productos'.$NombreFinalImg;
-  copy( $NombreTemporalImg, $UbicacionImg );
-  $Obj_Productos->Imagen = $UbicacionImg; //Acá se envía la ubicación final de la foto del producto
-}
+$Obj_Productos->Imagen = $_POST['Imagen'];
 //Ejecutamos el mantenimiento de agregar
 if( $Obj_Productos->Agregar() ) {
   //Si se ejecuta, redireccionamos al formulario de listar con mensaje succes

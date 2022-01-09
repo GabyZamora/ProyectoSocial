@@ -2,12 +2,12 @@
 //Llamamos a la capa de datos
 require_once 'datos/datos.php';
 //Llamamos a la capa de negocio
-require_once 'negocio/categoria.php';
+require_once 'negocio/productos.php';
 require_once 'negocio/paginador.php';
 include('presentacion/navconf.php');
 //Instanciamos las clases de la capa de negocio
 $Obj_Paginador = new Paginador();
-$Obj_Categorias = new Categoria();
+$Obj_Productos = new Producto();
 
 //Asignamos los valores necesatrios a los atributos de la clase del paginador -----------------------------------------
 $Obj_Paginador->Cadena = $Obj_Categorias->ListarTodos( addslashes( @$_POST['txtBuscar'] ) );

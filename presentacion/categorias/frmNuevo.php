@@ -1,3 +1,6 @@
+<?php
+include ('presentacion/navconf.php');
+?>
 <!-- CSS -->
 <link rel="stylesheet" href="css/iconfont/material-icons.css">
 <link rel="stylesheet" href="css/bootstrap-4.3.1.min.css">

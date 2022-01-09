@@ -4,6 +4,8 @@ require_once 'datos/datos.php';
 //Llamamos a la capa de negocio
 require_once 'negocio/categoria.php';
 
+include ('presentacion/navconf.php');
+
 //Instanciamos las clases de la capa de negocio
 $Obj_Categorias = new Categorias();
 //Cargamos el registro solicitado

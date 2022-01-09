@@ -1,7 +1,7 @@
 <?php
 require_once 'datos/datos.php';
 require_once 'negocio/categoria.php';
-include 'presentacion/nav.php';
+include 'presentacion/navconf.php';
 $Obj_Categoria= new Categoria();
 $DatosCategoria = $Obj_Categoria->ListarTodoCombos();
 ?>
@@ -20,7 +20,7 @@ $DatosCategoria = $Obj_Categoria->ListarTodoCombos();
 	<link rel="stylesheet" href="css/menuside.css">
 
 
-<form name="frmNuevo" action="" method="post" enctype="multipart/form-data">
+<form name="frmNuevo" action="#" method="post" enctype="multipart/form-data">
 	<div class="container">
 		<div class="table-wrapper">
  			<div class="table-title">
@@ -68,15 +68,9 @@ $DatosCategoria = $Obj_Categoria->ListarTodoCombos();
 						 ?>
 		 			</select>
 				</div>
-                <div class="form-group col-md-8">
-					<label>Precio: </label>
- 					<input type="text" class="form-control" id="txtPrecio"
-					name="txtPrecio">
- 				</div>
-            </div>
             <div class="form-row">
  				<div class="form-group col-md-8">
-					<label>Nombre de producto: </label>
+					<label>Imagen de producto: </label>
  					<input type="file" class="form-control" id="Imagen"
 					name="Imagen">
  				</div>
@@ -88,13 +82,10 @@ $DatosCategoria = $Obj_Categoria->ListarTodoCombos();
 <script type="text/javascript">
 	function ValidarNuevo(){
 		 if ( !document.getElementById('txtNombreServ').value ) {
-		 alert('Ingrese el nombre del servicio');
-		 }
-		 else if ( !document.getElementById('txtDetalles').value ) {
-		 alert('Ingrese detalles del servicio');
+		 alert('Ingrese el nombre del producto');
 		 }
 		 else if (!document.getElementById('cbxCategoria').value) {
-			 alert('Seleccione categoría de servicio')
+			 alert('Seleccione categoría de producto')
 		 }
 		 else {
 		 document.forms.frmNuevo.action = 'index.php?mod=prod&form=ag';

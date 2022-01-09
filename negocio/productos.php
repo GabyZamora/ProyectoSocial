@@ -1,5 +1,5 @@
 <?php
-  class productos extends Datos {
+  class Producto extends Datos {
     //Atributos, corresponden a cada uno de los campos de la tabla de productos
     public $Nombre;
     public $Categoria;
@@ -50,7 +50,7 @@
         '".addslashes($this->Nombre)."',
         '".addslashes($this->Categoria)."',
         '".addslashes($this->Descripcion)."',
-        '".addslashes($this->Imagen)."',
+        '".addslashes(file_get_contents($_FILES['Imagen']['tmp_name']))."',
         'N' )";
         return $this->EjecutarQuery( $Cadena );
       }
