@@ -14,7 +14,7 @@ body{
 
 .contain{
     width: auto;
-    max-width: auto;
+    margin-left: 70px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -23,9 +23,10 @@ body{
 }
 
 .contain .card{
-    width: 275px;
+    width: 240px;
     height: auto;
     border-radius: 8px;
+    border-color: #6a6a6a;
     box-shadow: 0 2px 2px rbga(0, 0, 0.2);
     overflow: hidden;
     margin: 20px;
@@ -40,8 +41,8 @@ body{
 }
 
 .contain .card img{
-    width: 330px;
-    height: 220px;
+    width: 93px;
+    height: 175px;
 }
 
 .contain .card h4{

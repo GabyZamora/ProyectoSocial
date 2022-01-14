@@ -31,6 +31,21 @@ switch ( @$_GET['form'] ) {
   $FormValid = true;
   break;
 
+  case 'me':
+    $Form = 'presentacion/categorias/medicamento.php';
+    $FormValid = true;
+    break;
+
+    case 'ja':
+      $Form = 'presentacion/categorias/jarabe.php';
+      $FormValid = true;
+    break;
+
+    case 'pil':
+      $Form = 'presentacion/categorias/pildoras.php';
+      $FormValid = true;
+    break;
+
   default:
   $FormValid = false;
   break;
