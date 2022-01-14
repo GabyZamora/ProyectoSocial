@@ -18,7 +18,7 @@ include('presentacion/nav.php');
   <script src="js/bootstrap-4.3.1.min.js"></script>
 </head>
 <body>
-  <h2 class="title">Cátalogo de productos</h2>
+  <h2 class="title">Pildoras</h2>
   <div class="contain">
     <?php
     include('datos/conexion.php');
@@ -29,8 +29,7 @@ include('presentacion/nav.php');
       <div class="card">
         <img src="data:image/png;base64, <?php echo base64_encode($row['Producto_imagen']); ?>">
         <h4><?php echo $row ['Nombre']; ?></h4>
-        <p><?php echo $row['Descripcion']; ?></p>
-        <a href="#">Ver más</a>
+        <a href="index.php?mod=prod&form=de&id=<?php echo $row['IdProducto']; ?>">Ver más</a>
       </div>
       
       <?php

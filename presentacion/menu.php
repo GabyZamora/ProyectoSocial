@@ -26,10 +26,12 @@ include ('nav.php');
       <b><h3>Categorías</h3></b>
       <table>
         <tr>
-          <td><a href="index.php?mod=cate&form=ja"><img class="circulo" src="images/crema.png"></a><h4>Jarabe</h4></td>
-          <td><a href="index.php?mod=cate&form=me"><img class="circulo" src="images/gotas.png"></a><h4>Gotas</h4></td>
-          <td><a href="index.php?mod=cate&form=pil"><img class="circulo" src="images/pildoras.png"></a><h4>Medicamentos</h4></td>
-      </tr>
+          <td><a href="index.php?mod=cate&form=ja"><img class="circulo" src="images/jarabe.png"></a><h4>Jarabes</h4></td>
+          <td><a href="index.php?mod=cate&form=cre"><img class="circulo" src="images/crema.png"></a><h4>Cremas</h4></td>
+          <td><a href="index.php?mod=cate&form=pil"><img class="circulo" src="images/pastilla.png"></a><h4>Pildoras</h4></td>
+          <td><a href="index.php?mod=cate&form=me"><img class="circulo" src="images/pildoras.png"></a><<h4>Medicamentos</h4></td>
+        </tr>
+      </table>
     </div>
   </div>
 </body>

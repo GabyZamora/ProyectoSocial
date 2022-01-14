@@ -18,11 +18,11 @@ include('presentacion/nav.php');
   <script src="js/bootstrap-4.3.1.min.js"></script>
 </head>
 <body>
-  <h2 class="title">Medicamentos</h2>
+  <h2 class="title">Cremas</h2>
   <div class="contain">
     <?php
     include('datos/conexion.php');
-      $query="SELECT * FROM productos WHERE IdCategoria='4'";;
+      $query="SELECT * FROM productos WHERE IdCategoria='1'";
       $resultado=$conexion->query($query);
       while ($row=$resultado->fetch_assoc()){
         ?>

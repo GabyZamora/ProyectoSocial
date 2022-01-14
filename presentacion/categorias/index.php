@@ -46,6 +46,11 @@ switch ( @$_GET['form'] ) {
       $FormValid = true;
     break;
 
+    case 'cre':
+      $Form = 'presentacion/categorias/crema.php';
+      $FormValid = true;
+    break;
+
   default:
   $FormValid = false;
   break;

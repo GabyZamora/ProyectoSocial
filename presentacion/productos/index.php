@@ -20,6 +20,11 @@ switch ( @$_GET['form'] ) {
 		$Form = 'presentacion/productos/editar.php';
 		$FormValid = true;
 		break;
+
+		case 'de':
+			$Form = 'presentacion/productos/frmDetalles.php';
+			$FormValid = true;
+			break;
 	//Opción para abrir el archivo que actualiza los registros
 		case 'ac':
 		$Form = 'presentacion/productos/actualizar.php';
