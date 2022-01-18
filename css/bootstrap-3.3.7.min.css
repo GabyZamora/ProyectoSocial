@@ -2015,6 +2015,7 @@ pre code {
   .col-md-8,
   .col-md-9 {
     float: left;
+    margin-left: 50px;
   }
   .col-md-12 {
     width: 100%;

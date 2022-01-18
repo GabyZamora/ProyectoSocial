@@ -5,6 +5,11 @@ switch ( @$_GET['form'] ) {
 		$Form = 'presentacion/productos/catalogo.php';
 		$FormValid = true;
 		break;
+
+		case 'li':
+			$Form = 'presentacion/productos/frmListar.php';
+			$FormValid = true;
+			break;
 	//Opción para abrir formulario para nuevos registros
 		case 'nu':
 		$Form = 'presentacion/productos/nuevo.php';

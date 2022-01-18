@@ -75,7 +75,6 @@ $Obj_Paginador->ConfPaginador();
               ?>
               <tr>
                 <td><?php echo $Fila['Nombre']; ?></td>
-                <td>
                   <a href="index.php?mod=cate&form=ed&id=<?php echo $Fila['IdCategoria'];?>" class="edit"><i class="material-icons" data-toggle="tooltip"
                     title="Editar">&#xE254;</i></a>
                     <a href="#" class="delete" onclick="Eliminar('<?php echo $Fila['IdCategoria']; ?>');"><i class="material-icons" data-toggle="tooltip"

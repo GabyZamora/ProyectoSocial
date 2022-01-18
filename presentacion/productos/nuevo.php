@@ -17,7 +17,6 @@ $DatosCategoria = $Obj_Categoria->ListarTodoCombos();
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap-3.3.7.min.css"> 
 	<script src="https://kit.fontawesome.com/b1f3afb15c.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/menuside.css">
 
 
 <form name="frmNuevo" action="#" method="post" enctype="multipart/form-data">

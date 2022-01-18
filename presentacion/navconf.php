@@ -27,7 +27,7 @@
         <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start navbar-right">
           <ul>
             <li><a href="index.php?mod=cate&form=li">Categorias</a></li>
-            <li><a href="index.php?mod=prod&form=nu">Productos</a></li>
+            <li><a href="index.php?mod=prod&form=li">Productos</a></li>
             <li><a href="index.php?mod=ser&form=li">Servicios</a></li>
           </ul>
         </div>

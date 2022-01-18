@@ -11,9 +11,9 @@
       productos.IdProducto,
       productos.Nombre AS NombreProducto,
       productos.IdCategoria,
-      Categoria.Nombre AS NombreCategoria,
-      productos.descripcion, 
-      productos.Producto_imagen,
+      categorias.Nombre AS NombreCategoria,
+      productos.descripcion AS Descripcion, 
+      productos.Producto_imagen
       FROM 
       productos 
       INNER JOIN categorias ON productos.IdCategoria = categorias.IdCategoria

@@ -10,12 +10,12 @@ $Obj_Paginador = new Paginador();
 $Obj_Productos = new Producto();
 
 //Asignamos los valores necesatrios a los atributos de la clase del paginador -----------------------------------------
-$Obj_Paginador->Cadena = $Obj_Categorias->ListarTodos( addslashes( @$_POST['txtBuscar'] ) );
-$Obj_Paginador->CantTotalReg = $Obj_Categorias->CantTotalRegistros( addslashes( @$_POST['txtBuscar']
+$Obj_Paginador->Cadena = $Obj_Productos->ListarTodos( addslashes( @$_POST['txtBuscar'] ) );
+$Obj_Paginador->CantTotalReg = $Obj_Productos->CantTotalRegistros( addslashes( @$_POST['txtBuscar']
 ) );
-$Obj_Paginador->FilasPorPagina = 5; //Define la cantidad de registros mostrados por página
+$Obj_Paginador->FilasPorPagina = 15; //Define la cantidad de registros mostrados por página
 $Obj_Paginador->NumPagina = @$_GET['np']; //Define la página solicitada al paginador
-$Obj_Paginador->EnlaceListar = "mod=cate&form=li"; //Define el enlace al modulo y formulario listar de ese módulo
+$Obj_Paginador->EnlaceListar = "mod=prod&form=li"; //Define el enlace al modulo y formulario listar de ese módulo
 //Aplicamos la configuración al paginador
 $Obj_Paginador->ConfPaginador();
 //Fin de configuraciones del paginador --------------------------------------------------------------------------------
@@ -24,6 +24,12 @@ $Obj_Paginador->ConfPaginador();
 <link rel="stylesheet" href="css/iconfont/material-icons.css">
 <link rel="stylesheet" href="css/bootstrap-4.3.1.min.css">
 <link rel="stylesheet" href="css/formularios.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Open+Sans" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<link rel="stylesheet" href="css/iconfont/material-icons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap-3.3.7.min.css"> 
+	<script src="https://kit.fontawesome.com/b1f3afb15c.js" crossorigin="anonymous"></script>
 <!-- JS -->
 <script src="js/jquery-3.4.0.min.js"></script>
 <script src="js/bootstrap-4.3.1.min.js"></script>
@@ -32,8 +38,8 @@ $Obj_Paginador->ConfPaginador();
     <div class="table-title">
       <div class="form-row">
         <div class="col-md-4">
-          <a href="index.php?mod=cate&form=li" class="a-titulo-form"><h2>Gestión de
-            <b>Categorías</b></h2></a>
+          <a href="index.php?mod=prod&form=li" class="a-titulo-form"><h2>Gestión de
+            <b>Productos</b></h2></a>
           </div>
           <div class="col-md-3">
             <div class="input-group">
@@ -51,7 +57,7 @@ $Obj_Paginador->ConfPaginador();
             <button type="button" class="btn btn-danger" data-toggle="modal"
             onClick="location.replace('index.php');">
             <i class="material-icons">&#xe879;</i><span>Cerrar</span></button>
-            <button type="button" class="btn btn-success" onclick="location.replace('index.php?mod=cate&form=nu');">
+            <button type="button" class="btn btn-success" onclick="location.replace('index.php?mod=prod&form=nu');">
               <i class="material-icons">&#xe148;</i><span>Agregar Nuevo</span></button>
             </div>
           </div>
@@ -65,6 +71,8 @@ $Obj_Paginador->ConfPaginador();
           <thead>
             <tr>
               <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Descripción</th>
               <th>Acciones</th>
             </tr>
           </thead>
@@ -74,11 +82,13 @@ $Obj_Paginador->ConfPaginador();
             foreach ( $Obj_Paginador->RegistrosPaginados as $Fila ) {
               ?>
               <tr>
-                <td><?php echo $Fila['Nombre']; ?></td>
+                <td><?php echo $Fila['NombreProducto']; ?></td>
+                <td><?php echo $Fila['NombreCategoria']; ?></td>
+                <td><?php echo $Fila['Descripcion']; ?></td>
                 <td>
-                  <a href="index.php?mod=cate&form=ed&id=<?php echo $Fila['IdCategoria'];?>" class="edit"><i class="material-icons" data-toggle="tooltip"
+                  <a href="index.php?mod=prod&form=ed&id=<?php echo $Fila['IdProducto'];?>" class="edit"><i class="material-icons" data-toggle="tooltip"
                     title="Editar">&#xE254;</i></a>
-                    <a href="#" class="delete" onclick="Eliminar('<?php echo $Fila['IdCategoria']; ?>');"><i class="material-icons" data-toggle="tooltip"
+                    <a href="#" class="delete" onclick="Eliminar('<?php echo $Fila['IdProducto']; ?>');"><i class="material-icons" data-toggle="tooltip"
                       title="Eliminar">&#xE872;</i></a>
                     </td>
                   </tr>
@@ -92,7 +102,7 @@ $Obj_Paginador->ConfPaginador();
         <script type="text/javascript">
         function Eliminar(paId){
           if(confirm('¿Confirma eliminar este registro?')){
-            window.location.replace('index.php?mod=cate&form=el&id=' + paId);
+            window.location.replace('index.php?mod=prod&form=el&id=' + paId);
           }
         }
         </script>
