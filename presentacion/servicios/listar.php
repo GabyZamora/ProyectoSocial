@@ -1,5 +1,5 @@
 <?php
-include('presentacion/navconf.php');
+include('presentacion/nav.php');
 ?>
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&family=Quattrocento+Sans:wght@700&display=swap" rel="stylesheet"> 

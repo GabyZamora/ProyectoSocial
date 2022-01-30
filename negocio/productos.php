@@ -29,6 +29,19 @@
       return mysqli_fetch_row($this->EjecutarQuery( $Cadena ));
     } //Retorna el número de filas que tiene la consulta
 
+    public function BuscarCate( $paCategoria ){
+      $Cadena = "SELECT
+      productos.IdProducto,
+      productos.Nombre AS NombreProducto,
+      productos.IdCategoria,
+      categorias.Nombre AS NombreCategoria,
+      productos.Producto_imagen
+      FROM 
+      productos 
+      INNER JOIN categorias ON productos.IdCategoria = categorias.IdCategoria
+      WHERE productos.IdCategoria = '".$paCategoria."' ";
+      return $this->EjecutarQuery( $Cadena );
+    }
     public function ListarTodoCombos() {
       $Cadena = "SELECT * FROM productos WHERE
       Eliminado = 'N'
@@ -36,7 +49,17 @@
       return $this->EjecutarQuery( $Cadena );
     }
   public function BuscarPorId( $paId ) {
-    $Cadena = "SELECT * FROM productos WHERE IdProducto = '".$paId."' ";
+    $Cadena = "SELECT
+    productos.IdProducto,
+    productos.Nombre AS NombreProducto,
+    productos.IdCategoria,
+    categorias.Nombre AS NombreCategoria,
+    productos.descripcion AS Descripcion, 
+    productos.Producto_imagen
+    FROM 
+    productos 
+    INNER JOIN categorias ON productos.IdCategoria = categorias.IdCategoria
+    WHERE IdProducto = '".$paId."' ";
     return $this->EjecutarQuery( $Cadena );
     }
     public function Agregar() {

@@ -1,6 +1,71 @@
+/*Nav*/
+.navegador{ 
+    font-family: 'Quattrocento', sans-serif; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;
+    margin: 0; 
+    }
+  
+  /*Navbar*/
+    .nav{
+      background-color: white;
+      border-bottom: 5px solid #87d46b;
+    }
+  
+  
+  /*Class content*/
+    .content {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .nav p{
+      color: black;
+      font-family: 'Zilla Slab', serif;
+      font-size: 2.1em;
+      letter-spacing: 0.2em;
+      margin-left: 5.2em;
+      margin-top: 0.5em;
+  
+    }
+  
+  
+    .content ul li{
+      display: inline-block;
+    }
+  
+  
+    .content ul li a{
+      color: black;
+      display: block;
+      padding: 0.3em 0.6em;
+      font-family: 'Quattrocento';
+      font-size: 1.2em;
+      border-radius: 0.2em;
+      text-decoration: none;
+      margin-top: 4em;
+      margin-left: 0.3em;
+      margin-right: 7.5em;
+      margin-bottom: 0;
+    }
+  
+    .content ul li a:hover{
+      background-color:#a4e9cc;
+    }
+/*Img content*/
+    .content img {
+      position: absolute;
+      top: 1em;
+      left: 1.5em;
+      width: 4.9em;
+      height: 4.9em;
+    }
+/*Menú principal*/
 .cover img {
     top: 9em;
-    width: 48.025em;
+    width: 48em;
     height: 20em;
 }
 
@@ -37,4 +102,209 @@ table {
     margin-left: 10px;
 
 
+}
+
+
+/*Catalogo*/
+.catalogo body{
+    font-family: Quattrocento;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    color: #6a6a6a;
+    margin-top: 70px;
+    font-family: Quattrocento;
+}
+
+.contain{
+    width: auto;
+    margin-left: 70px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contain .card{
+    width: 240px;
+    height: auto;
+    border-radius: 8px;
+    border-color: #6a6a6a;
+    box-shadow: 0 2px 2px rbga(0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    float: left;
+}
+
+.contain .card:hover{
+    transform: translate(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0.2);
+}
+
+.contain .card img{
+    width: 93px;
+    height: 175px;
+}
+
+.contain .card h4{
+    font-weight: 600;
+    font-family: 'Quattrocento';
+} 
+
+
+.contain .card p{
+    padding: 0 2rem;
+    font-weight:400;
+    font-size: 14px;
+    font-family: 'Quattrocento';
+} 
+
+.contain .card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+.cate{
+    font-size: 20px;
+    font-family: 'Quattrocento';
+    font-style: italic;
+    text-align: left;
+    color: black;
+}
+.cate ul{
+    list-style: none;
+}
+.cate li{
+    list-style: none;
+}
+
+.cate a{
+    text-decoration: none;
+}
+/*Módulo información*/
+#info img{
+    width: 50px;
+    height: 50px;
+}
+
+#info p{
+    font-size: 16px;
+    font-family: 'Quattrocento';
+    text-align: center;
+}
+
+/*Detalles producto*/
+
+.containa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 15px;
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-bottom: 80px;
+}
+
+.containa .col-md-4 h3{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    text-align: left;
+    color: black;
+    margin-top: 50px;
+}
+
+.containa img{
+    width:auto;
+    height: 250px;
+    margin-top: 50px;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.containa label{
+    font-family: 'Quattrocento';
+    font-size: 16px;
+    text-align: left;
+    margin-top: 50px;
+    color: darkgrey;
+}
+
+
+.containa a{
+    font-family: 'Quattrocento';
+    font-size: 16px;
+    text-align: left;
+    margin-top: 50px;
+}
+/*Footer*/
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #3c995b;
+    height: auto;
+    width: 95vw;
+    font-family: 'Quattrocento';
+    padding-top: 40px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.footer-bottom h3{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 2rem;
+    text-align: left;
+    width: 100vw;
+    padding: 10px 0;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    margin: 1rem 0 0.90rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i{
+    font-size: 2rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom p{
+    font-size: 10px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    text-align: right;
+    margin-right: 100px;
 }

@@ -9,8 +9,7 @@ include('presentacion/nav.php');
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/bootstrap-3.3.7.min.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/catalogo.css">
+  <link rel="stylesheet" href="css/body.css">
 
 
     <!-- JS -->
@@ -20,9 +19,9 @@ include('presentacion/nav.php');
 <body>
   <h2 class="title">Pildoras</h2>
   <div class="contain">
-    <?php
+  <?php
     include('datos/conexion.php');
-      $query="SELECT * FROM productos WHERE IdCategoria='7'";;
+      $query="SELECT * FROM productos WHERE IdCategoria='7'";
       $resultado=$conexion->query($query);
       while ($row=$resultado->fetch_assoc()){
         ?>

@@ -4,13 +4,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="css/bootstrap-3.3.7.min.css">
-<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="../css/body.css">
 
   <!-- JS -->
 <script src="js/jquery-3.4.0.min.js"></script>
 <script src="js/bootstrap-4.3.1.min.js"></script>
 </head>
-<body>
+<body class="navegador">
   <nav class="nav navbar-default navbar-expand">
     <div class="content">
       <a href="index.php"><p>Productos Naturales</p>
@@ -24,7 +24,7 @@
             <span class="icon-bar"></span> 
           </button> 
         </div>
-        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start navbar-right">
+        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
           <ul>
             <li><a href="index.php?mod=info">Sobre Nosotros</a></li>
             <li><a href="index.php?mod=prod&form=cat">Productos</a></li>
