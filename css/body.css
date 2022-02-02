@@ -85,7 +85,7 @@
 .cate h4{
     text-align: center;
     font-family: 'Quattrocento';
-    font-size: 1.5em;
+    font-size: 16px;
 }
 .circulo {
     width: 150px;
@@ -103,8 +103,46 @@ table {
 
 
 }
+/*Categorias en catalogo*/
+.sidebar {
+    margin-bottom: 15px;
+    position: absolute;
+}
+
+.sidebar-right {
+    margin-right: -25px;
+}
+
+.list-group{
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+.list-group-item{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-family: 'Quattrocento';
+    font-size: 1.3em;
+}
 
 
+.list-group-item_light{
+    background-color: #bbbbc2 !important;
+    border-color: #ffffff;
+}
+
+.center-block{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    color: #172f3f;
+    text-decoration: none;
+}
 /*Catalogo*/
 .catalogo body{
     font-family: Quattrocento;
@@ -172,23 +210,6 @@ table {
     color: #3498db;
 }
 
-.cate{
-    font-size: 20px;
-    font-family: 'Quattrocento';
-    font-style: italic;
-    text-align: left;
-    color: black;
-}
-.cate ul{
-    list-style: none;
-}
-.cate li{
-    list-style: none;
-}
-
-.cate a{
-    text-decoration: none;
-}
 /*Módulo información*/
 #info img{
     width: 50px;

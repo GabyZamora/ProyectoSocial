@@ -20,15 +20,14 @@ include('presentacion/nav.php');
 </head>
 <body class="catalogo">
   <h2 class="title">Cátalogo de productos</h2>
-  <div class="col-md-2">
-    <label>Categorias: </label>
-      <select id="cbxCategorias" name="cbxCategorias" class="form-control">
-        <option value="">Seleccione...</option>
-        <option><a href="index.php?mod=cate&form=ja">Jarabes</a></option>
-        <option><a href="index.php?mod=cate&form=cre">Cremas</a></option>
-        <option><a href="index.php?mod=cate&form=pil">Pildoras</a></option>
-        <option><a href="index.php?mod=cate&form=me">Medicamentos</a></option>
-    </select>
+  <div class="col-md-1">
+    <section class="sidebar sidebar-right">
+      <label>Categorias: </label>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=ja">Jarabes</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=cre">Cremas</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=pil">Pildoras</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=me">Medicamentos</a></li>
+    </section>
   </div>
   <div class="contain">
     <?php

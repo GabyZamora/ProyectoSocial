@@ -18,6 +18,15 @@ include('presentacion/nav.php');
 </head>
 <body>
   <h2 class="title">Medicamentos</h2>
+  <div class="col-md-1">
+    <section class="sidebar sidebar-right">
+      <label>Categorias: </label>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=ja">Jarabes</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=cre">Cremas</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=pil">Pildoras</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=me">Medicamentos</a></li>
+    </section>
+  </div>
   <div class="contain">
     <?php
     include('datos/conexion.php');

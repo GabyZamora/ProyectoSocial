@@ -16,8 +16,17 @@ include('presentacion/nav.php');
   <script src="js/jquery-3.4.0.min.js"></script>
   <script src="js/bootstrap-4.3.1.min.js"></script>
 </head>
-<body>
+<body>  
   <h2 class="title">Jarabes</h2>
+  <div class="col-md-1">
+    <section class="sidebar sidebar-right">
+      <label>Categorias: </label>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=ja">Jarabes</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=cre">Cremas</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=pil">Pildoras</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=me">Medicamentos</a></li>
+    </section>
+  </div>
   <div class="contain">
     <?php
     include('datos/conexion.php');

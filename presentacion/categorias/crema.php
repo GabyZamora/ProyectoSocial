@@ -9,8 +9,7 @@ include('presentacion/nav.php');
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/bootstrap-3.3.7.min.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/catalogo.css">
+  <link rel="stylesheet" href="css/body.css">
 
 
     <!-- JS -->
@@ -19,6 +18,15 @@ include('presentacion/nav.php');
 </head>
 <body>
   <h2 class="title">Cremas</h2>
+  <div class="col-md-1">
+    <section class="sidebar sidebar-right">
+      <label>Categorias: </label>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=ja">Jarabes</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=cre">Cremas</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=pil">Pildoras</a></li>
+          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=me">Medicamentos</a></li>
+    </section>
+  </div>
   <div class="contain">
     <?php
     include('datos/conexion.php');
