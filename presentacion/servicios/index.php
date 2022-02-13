@@ -32,9 +32,14 @@ switch ( @$_GET['form'] ) {
 		break;
 	//Opción para abrir el archivo que elimina registros
 		case 'el':
-		$Form = 'presentacion/productos/eliminar.php';
+		$Form = 'presentacion/servicios/eliminar.php';
 		$FormValid = true;
 		break;
+
+		case 'cat':
+			$Form = 'presentacion/servicios/catalogo.php';
+			$FormValid = true;
+			break;
 	default:
 		$FormValid = false;
 		break;

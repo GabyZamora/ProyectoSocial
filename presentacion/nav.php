@@ -28,7 +28,7 @@
           <ul>
             <li><a href="index.php?mod=info">Sobre Nosotros</a></li>
             <li><a href="index.php?mod=prod&form=cat">Productos</a></li>
-            <li><a href="index.php?mod=ser&form=li">Servicios</a></li>
+            <li><a href="index.php?mod=ser&form=cat">Servicios</a></li>
           </ul>
         </div>
     </div>
