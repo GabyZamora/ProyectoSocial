@@ -14,13 +14,13 @@ include('nav.php');
 <script src="js/bootstrap-4.3.1.min.js"></script>
 </head>
     <div class="info">
-        <p style="margin-top: 50px; margin-left: 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste quod atque 
-        assumenda suscipit commodi harum similique enim libero laboriosam dignissimos, non nihil dolorem  
-        consequatur illo, accusamus, quae odio quod possimus, officia nam numquam minima pariatur suscipit  
-        obcaecati vero dolorum aspernatur? mollitia culpa dicta molestias magni. Lorem ipsum dolor sit amet  
-        consectetur adipisicing elit. Aut tempora iste nobis Iste, necessitatibus amet! Lorem, ipsum dolor sit  
-        amet consectetur adipisicing elit. Distinctio expedita pariatur voluptate ducimus quaerat, enim doloribus?
-        Atque laborum in repudiandae aliquam aliquid, alias nobis excepturi est deleniti eveniet earum hic.</p>
+        <p style="margin-top: 50px;">La medicina natural o naturopatía engloba una gran variedad de técnicas de medicina alternativa. 
+        El objetivo es estimular la capacidad curativa innata del cuerpo, y facilitar que sus mecanismos de equilibrio alcancen un buen estado de salud. 
+        La medicina natural se aplica siempre que haya un diagnóstico médico previo, para complementar a la medicina tradicional. Se utiliza para ayudar 
+        en una gran variedad de enfermedades. Al considerar la enfermedad como un conjunto de desajustes en el campo energético del paciente, se busca no 
+        solo paliar los síntomas sino también alcanzar un equilibrio emocional y orgánico y, por tanto, la curación del paciente. Para ello se basa en la 
+        capacidad del orgaismo para regenerarse, buscando la causa del problema y estimulando las capacidades de autocuración y recuperación cuidando de 
+        de la alimentación, la eliminación de toxinas, estimulación del sistema inmunitario. </p>
         <img style="margin-top: 2px; margin-left: 800px;" src="images/producto2.jpg">
     </div>
 </body>

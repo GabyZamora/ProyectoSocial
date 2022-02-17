@@ -19,43 +19,21 @@ include('presentacion/nav.php');
 </head>
 <body>
 
-<div class="services">
-    <section class="pricecol">
-        <div class="icon">
-            <i class="icon-magic"></i>
-        </div>
-        <h3><Span>Web Design</span></h3>
-            <ul>
-                <li>Etiam sit amet orci</li>
-                <li>Duis leo sed fringilla</li>
-                <li>Mauris sit amet nibh</li>
-                <li>Donec sodales sagittis</li>
-            </ul>
-    </section>
-    <section class="pricecol">
-        <div class="icon">
-            <i class="icon-leaf"></i>
-        </div>
-        <h3><Span>Development</span></h3>
-        <ul>
-            <li>Etiam sit amet orci</li>
-            <li>Duis leo sed fringilla</li>
-            <li>Mauris sit amet nibh</li>
-            <li>Donec sodales sagittis</li>
-        </ul>
-    </section>
-    <section class="pricecol">
-        <div class="icon">
-            <i class="icon-link"></i>
-        </div>
-        <h3><Span>Support</span></h3>
-        <ul>
-            <li>Etiam sit amet orci</li>
-            <li>Duis leo sed fringilla</li>
-            <li>Mauris sit amet nibh</li>
-            <li>Donec sodales sagittis</li>
-        </ul>
-    </section>
+<div class="serv">
+<?php
+    include('datos/conexion.php');
+      $query="SELECT * FROM servicios";
+      $resultado=$conexion->query($query);
+      while ($row=$resultado->fetch_assoc()){
+        ?>
+      <div class="card">
+        <img src="data:image/png;base64, <?php echo base64_encode($row['Servicio_Imagen']); ?>">
+        <h4><?php echo $row ['Nombre']; ?></h4>
+      </div>
+      <?php
+      }
+      ?>
+
 </div>
 </body>
 
