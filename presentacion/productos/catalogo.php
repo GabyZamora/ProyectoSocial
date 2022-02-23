@@ -39,7 +39,7 @@ include('presentacion/nav.php');
         ?>
       <div class="card">
         <img src="data:image/png;base64, <?php echo base64_encode($row['Producto_imagen']); ?>">
-        <h4><?php echo $row ['Nombre']; ?></h4>
+        <h4><?php echo utf8_encode($row ['Nombre']); ?></h4>
         <a href="index.php?mod=prod&form=de&id=<?php echo $row['IdProducto']; ?>">Ver más</a>
       </div>
       

@@ -28,8 +28,8 @@ header("Content-Type: text/html;charset=utf-8");
         ?>
     <div class="card">
         <img src="data:image/png;base64, <?php echo base64_encode($row['Servicio_Imagen']); ?>">
-        <h4><?php echo $row ['Nombre']; ?></h4>
-        <p> <?php echo $row['Descripcion']; ?></p>
+        <h4><?php echo utf8_encode($row ['Nombre']); ?></h4>
+        <p> <?php echo utf8_encode($row['Descripcion']); ?></p>
     </div>
       <?php
       }
