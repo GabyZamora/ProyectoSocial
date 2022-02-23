@@ -3,6 +3,7 @@ include('presentacion/nav.php');
 
 ?>
 <html lang="es">
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
   <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&family=Quattrocento+Sans:wght@700&display=swap" rel="stylesheet"> 

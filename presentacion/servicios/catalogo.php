@@ -1,10 +1,10 @@
 <?php
 include('presentacion/nav.php');
-
+header("Content-Type: text/html;charset=utf-8");
 ?>
-<html lang="es">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+    <html lang="es">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&family=Quattrocento+Sans:wght@700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/iconfont/material-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +26,11 @@ include('presentacion/nav.php');
       $resultado=$conexion->query($query);
       while ($row=$resultado->fetch_assoc()){
         ?>
-      <div class="card">
+    <div class="card">
         <img src="data:image/png;base64, <?php echo base64_encode($row['Servicio_Imagen']); ?>">
         <h4><?php echo $row ['Nombre']; ?></h4>
-      </div>
+        <p> <?php echo $row['Descripcion']; ?></p>
+    </div>
       <?php
       }
       ?>

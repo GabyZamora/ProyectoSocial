@@ -13,6 +13,9 @@ switch( @$_GET["mod"] ){
   case 'cate':
     $Section = 'presentacion/categorias/index.php';
     break;
+  case 'conf':
+    $Section = 'presentacion/conf.php';
+    break;
   default:
   $Section = 'presentacion/menu.php';
   break;
@@ -21,9 +24,9 @@ switch( @$_GET["mod"] ){
 <!----HTML main--->
 <!DOCTYPE html>
 <html>
-    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="Cardel Decoration" content="width=device-width,initial-scale=1.0">
+    <meta name="Productos Aura" content="width=device-width,initial-scale=1.0">
       <title>Productos Naturales Aura</title>
       <link rel="shortcut icon" href="images/logoaura2.jpeg.ico">
   </head>

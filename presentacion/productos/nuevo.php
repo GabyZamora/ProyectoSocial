@@ -2,8 +2,8 @@
 require_once 'datos/datos.php';
 require_once 'negocio/categoria.php';
 include 'presentacion/navconf.php';
-$Obj_Categoria= new Categoria();
-$DatosCategoria = $Obj_Categoria->ListarTodoCombos();
+$Obj_Categorias= new Categoria();
+$DatosCategorias = $Obj_Categoria->ListarTodoCombos();
 ?>
 <!-- CSS -->
 <head>
@@ -16,6 +16,7 @@ $DatosCategoria = $Obj_Categoria->ListarTodoCombos();
 	<link rel="stylesheet" href="css/iconfont/material-icons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap-3.3.7.min.css"> 
+	<link rel="stylesheet" href="css/body.css">
 	<script src="https://kit.fontawesome.com/b1f3afb15c.js" crossorigin="anonymous"></script>
 
 
@@ -29,7 +30,7 @@ $DatosCategoria = $Obj_Categoria->ListarTodoCombos();
 					</div>
  					<div class="col-md-4">
  						<button type="button" class="btn btn-danger"
-						onClick="location.replace('index.php?mod=prod&form=cat');"><i class="material-icons">&#xe5c9;</i><span>Cancelar</span></button>
+						onClick="location.replace('index.php?mod=prod&form=li');"><i class="material-icons">&#xe5c9;</i><span>Cancelar</span></button>
  						<button type="button" class="btn btn-success"
 						onClick="ValidarNuevo();"><i class="material-icons">&#xe161;</i><span>Guardar</span></button>
  					</div>
@@ -58,7 +59,7 @@ $DatosCategoria = $Obj_Categoria->ListarTodoCombos();
 					 <select id="cbxCategoria" name="cbxCategoria" class="form-control">
 						 <option value="">Seleccione...</option>
 						 <?php
-						 foreach ( $DatosCategoria as $FilaCategoria ) {
+						 foreach ( $DatosCategorias as $FilaCategoria ) {
 						 ?>
 			 			<option value="<?php echo $FilaCategoria['IdCategoria']; ?>"><?php echo
 						$FilaCategoria['Nombre']; ?></option>

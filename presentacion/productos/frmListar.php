@@ -29,6 +29,7 @@ $Obj_Paginador->ConfPaginador();
 	<link rel="stylesheet" href="css/iconfont/material-icons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap-3.3.7.min.css"> 
+  <link rel="stylesheet" href="css/body.css">
 	<script src="https://kit.fontawesome.com/b1f3afb15c.js" crossorigin="anonymous"></script>
 <!-- JS -->
 <script src="js/jquery-3.4.0.min.js"></script>
