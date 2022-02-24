@@ -219,19 +219,21 @@ table {
 }
 
 /*Módulo información*/
-#info{
+.info{
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 50px;
 }
-#info img{
-    width: 50px;
-    height: 50px;
+.info img{
+    width: 350px;
+    height: 350px;
 }
 
-#info p{
-    font-size: 16px;
+.info p{
+    font-size: 18px;
     font-family: 'Quattrocento';
     text-align: center;
+    padding-right: 50px;
 }
 
 /*Detalles producto*/

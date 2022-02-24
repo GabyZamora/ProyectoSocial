@@ -5,6 +5,7 @@ include ('presentacion/navconf.php');
 <link rel="stylesheet" href="css/iconfont/material-icons.css">
 <link rel="stylesheet" href="css/bootstrap-4.3.1.min.css">
 <link rel="stylesheet" href="css/formularios.css">
+<link rel="stylesheet" href="css/body.css">
 <form name="frmNuevo" action="" method="post">
   <div class="container">
     <div class="table-wrapper">

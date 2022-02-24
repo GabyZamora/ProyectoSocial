@@ -13,7 +13,7 @@
 <body class="navegador">
   <nav class="nav navbar-default navbar-expand">
     <div class="content">
-      <a href="index.php"><p>Productos Naturales</p>
+      <a href="presentacion/conf.php"><p>Productos Naturales</p>
       <p style="text-align: center; color:#3fc4ac;">Aura</p></a>
         <img src="images/logoaura2.jpg">
         <div class="navbar d-flex col"> 
@@ -26,9 +26,9 @@
         </div>
         <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
           <ul>
-            <li><a href="../index.php?mod=cate&form=li">Categorías</a></li>
-            <li><a href="../index.php?mod=prod&form=li">Productos</a></li>
-            <li><a href="../index.php?mod=ser&form=li">Servicios</a></li>
+            <li><a href="index.php?mod=cate&form=li">Categorías</a></li>
+            <li><a href="index.php?mod=prod&form=li">Productos</a></li>
+            <li><a href="index.php?mod=ser&form=li">Servicios</a></li>
           </ul>
         </div>
     </div>

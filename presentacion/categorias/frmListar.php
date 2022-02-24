@@ -13,7 +13,7 @@ $Obj_Categorias = new Categoria();
 $Obj_Paginador->Cadena = $Obj_Categorias->ListarTodos( addslashes( @$_POST['txtBuscar'] ) );
 $Obj_Paginador->CantTotalReg = $Obj_Categorias->CantTotalRegistros( addslashes( @$_POST['txtBuscar']
 ) );
-$Obj_Paginador->FilasPorPagina = 5; //Define la cantidad de registros mostrados por página
+$Obj_Paginador->FilasPorPagina = 10; //Define la cantidad de registros mostrados por página
 $Obj_Paginador->NumPagina = @$_GET['np']; //Define la página solicitada al paginador
 $Obj_Paginador->EnlaceListar = "mod=cate&form=li"; //Define el enlace al modulo y formulario listar de ese módulo
 //Aplicamos la configuración al paginador
@@ -24,6 +24,7 @@ $Obj_Paginador->ConfPaginador();
 <link rel="stylesheet" href="css/iconfont/material-icons.css">
 <link rel="stylesheet" href="css/bootstrap-4.3.1.min.css">
 <link rel="stylesheet" href="css/formularios.css">
+<link rel="stylesheet" href="css/body.css">
 <!-- JS -->
 <script src="js/jquery-3.4.0.min.js"></script>
 <script src="js/bootstrap-4.3.1.min.js"></script>
@@ -75,6 +76,7 @@ $Obj_Paginador->ConfPaginador();
               ?>
               <tr>
                 <td><?php echo $Fila['Nombre']; ?></td>
+                <td>
                   <a href="index.php?mod=cate&form=ed&id=<?php echo $Fila['IdCategoria'];?>" class="edit"><i class="material-icons" data-toggle="tooltip"
                     title="Editar">&#xE254;</i></a>
                     <a href="#" class="delete" onclick="Eliminar('<?php echo $Fila['IdCategoria']; ?>');"><i class="material-icons" data-toggle="tooltip"
