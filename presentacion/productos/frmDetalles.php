@@ -24,19 +24,29 @@ $DatosProductos = $Fila;
 <link rel="stylesheet" href="css/bootstrap-3.3.7.min.css">
 <link rel="stylesheet" href="css/body.css">
 <!-- JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/jquery-3.4.0.min.js"></script>
 <script src="js/bootstrap-4.3.1.min.js"></script>
 </head>
 <body>
 	<div class="containa">
-		<div style="border: white 8px groove; border-radius:10px;"class="col-md-4">
-			<img src="data:image/png;base64, <?php echo base64_encode($Fila['Producto_imagen']); ?>">
+		<script>
+			$(document).ready(function(){
+				$('.zoom').hover(function() {
+					$(this).addClass('transition');
+				}, function() {
+					$(this).removeClass('transition');
+				});
+			});
+		</script>
+		<div class="col-md-4">
+			<img  src="data:image/png;base64, <?php echo base64_encode($Fila['Producto_imagen']); ?>" class="zoom">
 		</div>
 		<div class="col-md-4">
 			<h3 style="font-size: 30px; font-family: 'Bitter';"><b><?php echo $Fila['NombreProducto']; ?></b></h3>
 			<h3> <?php echo $Fila['Descripcion']; ?> </h3>
 			<h3><b>Categoría:</b> <?php echo $Fila['NombreCategoria']; ?></h3>
-			<label>Para más información sobre este y más productos, consulta en nuestra página de facebook<br> <a href="https://www.facebook.com/NaturistaAura/">Productos Naturales Aura</a></label>
+			<label>Para más información sobre este y más productos, consulta en nuestra página de facebook<br> <a href="https://www.facebook.com/NaturistaAura/" target="_blank">Productos Naturales Aura</a></label>
 		</div>	
 	</div> 
 </body>

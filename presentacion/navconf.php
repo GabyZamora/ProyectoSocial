@@ -13,7 +13,7 @@
 <body class="navegador">
   <nav class="nav navbar-default navbar-expand">
     <div class="content">
-      <a href="presentacion/conf.php"><p>Productos Naturales</p>
+      <a href="index.php?mod=conf"><p>Productos Naturales</p>
       <p style="text-align: center; color:#3fc4ac;">Aura</p></a>
         <img src="images/logoaura2.jpg">
         <div class="navbar d-flex col"> 

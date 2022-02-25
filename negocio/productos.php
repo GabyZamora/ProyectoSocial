@@ -29,7 +29,7 @@
       return mysqli_fetch_row($this->EjecutarQuery( $Cadena ));
     } //Retorna el número de filas que tiene la consulta
 
-    public function BuscarCate( $paCategoria ){
+    public function Jarabe( $paBuscar ){
       $Cadena = "SELECT
       productos.IdProducto,
       productos.Nombre AS NombreProducto,
@@ -39,8 +39,49 @@
       FROM 
       productos 
       INNER JOIN categorias ON productos.IdCategoria = categorias.IdCategoria
-      WHERE productos.IdCategoria = '".$paCategoria."' ";
-      return $this->EjecutarQuery( $Cadena );
+      WHERE (productos.IdCategoria = '6') AND productos.Eliminado='N' ";
+      return $Cadena;
+    }
+
+    public function Pildora( $paBuscar ){
+      $Cadena = "SELECT
+      productos.IdProducto,
+      productos.Nombre AS NombreProducto,
+      productos.IdCategoria,
+      categorias.Nombre AS NombreCategoria,
+      productos.Producto_imagen
+      FROM 
+      productos 
+      INNER JOIN categorias ON productos.IdCategoria = categorias.IdCategoria
+      WHERE (productos.IdCategoria = '7') AND productos.Eliminado='N' ";
+      return $Cadena;
+    }
+
+    public function Medicamento( $paBuscar ){
+      $Cadena = "SELECT
+      productos.IdProducto,
+      productos.Nombre AS NombreProducto,
+      productos.IdCategoria,
+      categorias.Nombre AS NombreCategoria,
+      productos.Producto_imagen
+      FROM 
+      productos 
+      INNER JOIN categorias ON productos.IdCategoria = categorias.IdCategoria
+      WHERE (productos.IdCategoria = '4') AND productos.Eliminado='N' ";
+      return $Cadena;
+    }
+    public function Crema( $paBuscar ){
+      $Cadena = "SELECT
+      productos.IdProducto,
+      productos.Nombre AS NombreProducto,
+      productos.IdCategoria,
+      categorias.Nombre AS NombreCategoria,
+      productos.Producto_imagen
+      FROM 
+      productos 
+      INNER JOIN categorias ON productos.IdCategoria = categorias.IdCategoria
+      WHERE (productos.IdCategoria = '1') AND productos.Eliminado='N' ";
+      return $Cadena;
     }
     public function ListarTodoCombos() {
       $Cadena = "SELECT * FROM productos WHERE

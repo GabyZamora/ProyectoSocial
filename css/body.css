@@ -153,7 +153,7 @@ table {
 }
 /*Catalogo*/
 .catalogo body{
-    font-family: Quattrocento;
+    font-family: 'Quattrocento';
     letter-spacing: 0.03em;
     line-height: 1.6;
 }
@@ -162,8 +162,8 @@ table {
     text-align: center;
     font-size: 40px;
     color: #6a6a6a;
-    margin-top: 70px;
-    font-family: Quattrocento;
+    margin-top: 50px;
+    font-family: 'Quattrocento';
 }
 
 .contain{
@@ -259,11 +259,26 @@ table {
 }
 
 .containa img{
-    width:auto;
-    height: 250px;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     align-items: center;
     margin-left: 100px;
+}
+
+.containa img.zoom {
+    width: auto;
+    height: 350px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+}
+
+.transition {
+    -webkit-transform: scale(1.5); 
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 .containa label{
@@ -286,7 +301,7 @@ table {
 .serv{
     width: auto;
     margin-left: 70px;
-    margin-top: 50px;
+    margin-top: 30px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -304,14 +319,8 @@ table {
     overflow: hidden;
     margin: 20px;
     text-align: center;
-    transition: all 0.25s;
-    float: left;
 }
 
-.serv .card:hover{
-    transform: translate(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0.2);
-}
 
 .serv .card img{
     width: 93px;

@@ -1,6 +1,23 @@
 <?php
+//Llamamos a la capa de datos
+require_once 'datos/datos.php';
+//Llamamos a la capa de negocio
+require_once 'negocio/servicios.php';
+require_once 'negocio/paginador.php';
 include('presentacion/nav.php');
-header("Content-Type: text/html;charset=utf-8");
+//Instanciamos las clases de la capa de negocio
+$Obj_Paginador = new Paginador();
+$Obj_Servicios = new Servicios();
+
+//Asignamos los valores necesatrios a los atributos de la clase del paginador -----------------------------------------
+$Obj_Paginador->Cadena = $Obj_Servicios->ListarTodos( addslashes( @$_POST['txtBuscar'] ) );
+$Obj_Paginador->CantTotalReg = $Obj_Servicios->CantTotalRegistros( addslashes( @$_POST['txtBuscar']
+) );
+$Obj_Paginador->FilasPorPagina = 20; //Define la cantidad de registros mostrados por página
+$Obj_Paginador->NumPagina = @$_GET['np']; //Define la página solicitada al paginador
+$Obj_Paginador->EnlaceListar = "mod=ser&form=cat"; //Define el enlace al modulo y formulario listar de ese módulo
+//Aplicamos la configuración al paginador
+$Obj_Paginador->ConfPaginador();
 ?>
 <head>
     <html lang="es">
@@ -18,23 +35,19 @@ header("Content-Type: text/html;charset=utf-8");
     <script src="js/bootstrap-4.3.1.min.js"></script>
 </head>
 <body>
-
-<div class="serv">
-<?php
-    include('datos/conexion.php');
-      $query="SELECT * FROM servicios";
-      $resultado=$conexion->query($query);
-      while ($row=$resultado->fetch_assoc()){
+    <h2 class="title">Nuestros servicios</h2>
+    <div class="serv">
+        <?php
+            foreach ( $Obj_Paginador->RegistrosPaginados as $Fila ) {
         ?>
-    <div class="card">
-        <img src="data:image/png;base64, <?php echo base64_encode($row['Servicio_Imagen']); ?>">
-        <h4><?php echo utf8_encode($row ['Nombre']); ?></h4>
-        <p> <?php echo utf8_encode($row['Descripcion']); ?></p>
+        <div class="card">
+            <img src="data:image/png;base64, <?php echo base64_encode($Fila['Servicio_Imagen']); ?>">
+            <h4><?php echo utf8_encode($Fila ['Nombre']); ?></h4>
+            <p> <?php echo utf8_encode($Fila['Descripcion']); ?></p>
+        </div>
+        <?php
+        }
+        ?>
     </div>
-      <?php
-      }
-      ?>
-
-</div>
 </body>
 

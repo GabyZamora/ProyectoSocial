@@ -13,6 +13,7 @@ include('nav.php');
 <script src="js/jquery-3.4.0.min.js"></script>
 <script src="js/bootstrap-4.3.1.min.js"></script>
 </head>
+    <h2 class="title">Sobre Nosotros</h2>
     <div class="info">
         <p>La medicina natural o naturopatía engloba una gran variedad de técnicas de medicina alternativa. 
         El objetivo es estimular la capacidad curativa innata del cuerpo, y facilitar que sus mecanismos de equilibrio alcancen un buen estado de salud. 
@@ -21,6 +22,6 @@ include('nav.php');
         solo paliar los síntomas sino también alcanzar un equilibrio emocional y orgánico y, por tanto, la curación del paciente. Para ello se basa en la 
         capacidad del orgaismo para regenerarse, buscando la causa del problema y estimulando las capacidades de autocuración y recuperación cuidando de 
         de la alimentación, la eliminación de toxinas, estimulación del sistema inmunitario. </p>
-        <img src="images/producto2.jpg">
+        <img src="images/producto2.jpg"><img src="images/cover.jpg"><img src="images/flowers.jpg">
     </div>
 </body>
