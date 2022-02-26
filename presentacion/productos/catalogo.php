@@ -42,7 +42,6 @@ $Obj_Paginador->ConfPaginador();
     <section class="sidebar sidebar-right">
       <label>Categorias: </label>
           <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=ja">Jarabes</a></li>
-          <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=cre">Cremas</a></li>
           <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=pil">Pildoras</a></li>
           <li class="list-group-item list-group-item_light"><a class="center-block" href="index.php?mod=cate&form=me">Medicamentos</a></li>
     </section>

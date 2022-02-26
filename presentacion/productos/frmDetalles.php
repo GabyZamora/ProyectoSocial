@@ -43,7 +43,7 @@ $DatosProductos = $Fila;
 			<img  src="data:image/png;base64, <?php echo base64_encode($Fila['Producto_imagen']); ?>" class="zoom">
 		</div>
 		<div class="col-md-4">
-			<h3 style="font-size: 30px; font-family: 'Bitter';"><b><?php echo $Fila['NombreProducto']; ?></b></h3>
+			<h3 style="font-size: 30px; font-family: 'Bitter';"><b><?php echo utf8_encode($Fila['NombreProducto']); ?></b></h3>
 			<h3> <?php echo $Fila['Descripcion']; ?> </h3>
 			<h3><b>Categoría:</b> <?php echo $Fila['NombreCategoria']; ?></h3>
 			<label>Para más información sobre este y más productos, consulta en nuestra página de facebook<br> <a href="https://www.facebook.com/NaturistaAura/" target="_blank">Productos Naturales Aura</a></label>
